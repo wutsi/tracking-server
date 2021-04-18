@@ -5,14 +5,9 @@
 [![](https://img.shields.io/badge/maven-3.6-brightgreen.svg)](https://maven.apache.org/download.cgi)
 ![](https://img.shields.io/badge/language-kotlin-blue.svg)
 
-API for tracking user activities&#10;
+API for storing user interactions.
 
 # Installation Prerequisites
-## Database Setup
-- Install postgres
-- Create account with username/password: `postgres`/`postgres`
-- Create a database named `tracking`
-
 ## Configure Github
 - Generate a Github token for accessing packages from GibHub
   - Goto [https://github.com/settings/tokens](https://github.com/settings/tokens)
