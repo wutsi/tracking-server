@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Configuration
 )
 class StorageS3Configuration(
     @Value("\${aws.s3.region}") private val region: String,
-    @Value("\${tracking.storage.s3.bucket}") private val bucket: String
+    @Value("\${storage.s3.bucket}") private val bucket: String
 
 ) {
     @Bean
