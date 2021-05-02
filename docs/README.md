@@ -1,4 +1,5 @@
 - [Events](Event.md)
 - [Tracing CSV Format](TrackingCSVFormat.md)
 - [Tracing Events](TrackingEvent.md)
+- [Security](Security.md)
 - [API](https://wutsi.github.io/tracking-server/api/)
