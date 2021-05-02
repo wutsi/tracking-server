@@ -27,9 +27,17 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PushTrackResponse'
+      security:
+        - api_key:
+            - tracking.admin
       tags:
         - Tracking
 components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      in: header
+      name: Authorization
   schemas:
     PushTrackResponse:
       type: object
