@@ -39,7 +39,7 @@
     <wutsi-stream-rabbitmq.version>1.5.0</wutsi-stream-rabbitmq.version>
     <wutsi-tracing.version>1.2.0</wutsi-tracing.version>
     <wutsi-tracking-sdk-kotlin.version>1.0.0</wutsi-tracking-sdk-kotlin.version>
-    <ua-java.version>1.4.3</ua-java.version>
+    <ua-java.version>1.5.2</ua-java.version>
   </properties>
 
   <dependencies>
