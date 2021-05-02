@@ -13,5 +13,3 @@ jobs:
       - name: Run
         run: |
           curl -sSf https://wutsi-tracking-prod.herokuapp.com/actuator/health >> /dev/null
-
-
