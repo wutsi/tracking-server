@@ -33,7 +33,7 @@
     <jackson-modules-java8.version>2.12.2</jackson-modules-java8.version>
     <klint.version>0.40.0</klint.version>
     <maven-antrun-plugin.version>1.7</maven-antrun-plugin.version>
-    <opencsv.version>4.0</opencsv.version>
+    <opencsv.version>4.6</opencsv.version>
     <wutsi-security.version>1.0.0</wutsi-security.version>
     <wutsi-storage-aws.version>1.0.0</wutsi-storage-aws.version>
     <wutsi-stream-rabbitmq.version>1.5.0</wutsi-stream-rabbitmq.version>
