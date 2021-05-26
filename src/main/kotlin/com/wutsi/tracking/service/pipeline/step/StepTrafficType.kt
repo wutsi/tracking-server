@@ -23,7 +23,8 @@ class StepTrafficType : Step {
         private val EMAIL_DOMAINS = arrayListOf(
             "mail.google.com",
             "mail.yahoo.com",
-            "outlook.live.com"
+            "outlook.live.com",
+            "pixel.mail.wutsi.com"
         )
     }
 

@@ -44,6 +44,13 @@ internal class StepTrafficTypeTest {
     }
 
     @Test
+    fun wutsiPixelReferer() {
+        val track = createTrack("https://pixel.mail.wutsi.com/1232")
+        step.process(track)
+        assertEquals(TrafficType.email, track.trafficType)
+    }
+
+    @Test
     fun hotmailReferer() {
         val track = createTrack("https://outlook.live.com/msg/fdfdkjfdkj")
         step.process(track)
