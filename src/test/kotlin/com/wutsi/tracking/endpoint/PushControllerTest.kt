@@ -5,13 +5,16 @@ import com.nhaarman.mockitokotlin2.argumentCaptor
 import com.nhaarman.mockitokotlin2.doReturn
 import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.whenever
+import com.wutsi.platform.security.apikey.ApiKeyContext
 import com.wutsi.security.SecurityApi
-import com.wutsi.security.apikey.ApiKeyContext
 import com.wutsi.security.dto.ApiKey
 import com.wutsi.security.dto.GetApiKeyResponse
-import com.wutsi.tracking.domain.Track
+import com.wutsi.stream.EventStream
 import com.wutsi.tracking.dto.PushTrackRequest
 import com.wutsi.tracking.dto.PushTrackResponse
+import com.wutsi.tracking.dto.Track
+import com.wutsi.tracking.event.TrackProcessedEventPayload
+import com.wutsi.tracking.event.TrackingEventType
 import com.wutsi.tracking.service.pipeline.Pipeline
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -46,6 +49,9 @@ internal class PushControllerTest {
 
     @MockBean
     private lateinit var context: ApiKeyContext
+
+    @MockBean
+    private lateinit var eventStream: EventStream
 
     protected fun givenApiKey(scope: String? = null): ApiKey {
         val apiKeyId = UUID.randomUUID().toString()
@@ -95,6 +101,8 @@ internal class PushControllerTest {
         assertEquals(request.ua, track.userAgent)
         assertEquals(request.value, track.value)
         assertEquals(request.ip, track.ip)
+
+        verify(eventStream).publish(TrackingEventType.TRACK_PROCESSED.urn, TrackProcessedEventPayload(track))
     }
 
     @Test

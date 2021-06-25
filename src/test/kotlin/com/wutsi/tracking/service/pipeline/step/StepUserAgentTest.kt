@@ -1,6 +1,6 @@
 package com.wutsi.tracking.service.pipeline.step
 
-import com.wutsi.tracking.domain.Track
+import com.wutsi.tracking.dto.Track
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue

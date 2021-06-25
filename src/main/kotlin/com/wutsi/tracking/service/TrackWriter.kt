@@ -1,7 +1,7 @@
 package com.wutsi.tracking.service
 
 import com.opencsv.CSVWriter
-import com.wutsi.tracking.domain.Track
+import com.wutsi.tracking.dto.Track
 import org.springframework.stereotype.Service
 import java.io.OutputStream
 import java.io.OutputStreamWriter

@@ -1,9 +1,9 @@
 package com.wutsi.tracking.service.pipeline.step
 
-import com.wutsi.tracking.domain.Browser
-import com.wutsi.tracking.domain.Device
-import com.wutsi.tracking.domain.OS
-import com.wutsi.tracking.domain.Track
+import com.wutsi.tracking.dto.Browser
+import com.wutsi.tracking.dto.Device
+import com.wutsi.tracking.dto.OS
+import com.wutsi.tracking.dto.Track
 import com.wutsi.tracking.service.pipeline.Step
 import ua_parser.Client
 import ua_parser.Parser

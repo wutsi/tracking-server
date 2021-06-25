@@ -1,7 +1,7 @@
 package com.wutsi.tracking.service
 
 import com.wutsi.storage.StorageService
-import com.wutsi.tracking.domain.Track
+import com.wutsi.tracking.dto.Track
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.io.ByteArrayInputStream

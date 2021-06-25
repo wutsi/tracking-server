@@ -17,6 +17,6 @@ public data class PushTrackRequest(
     public val referer: String? = null,
     public val page: String? = null,
     public val event: String? = null,
-    public val value: String? = null,
+    public val `value`: String? = null,
     public val url: String? = null
 )

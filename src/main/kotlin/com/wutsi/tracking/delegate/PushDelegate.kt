@@ -1,16 +1,19 @@
 package com.wutsi.tracking.`delegate`
 
-import com.wutsi.tracking.domain.Track
+import com.wutsi.stream.EventStream
 import com.wutsi.tracking.dto.PushTrackRequest
 import com.wutsi.tracking.dto.PushTrackResponse
+import com.wutsi.tracking.dto.Track
+import com.wutsi.tracking.event.TrackProcessedEventPayload
+import com.wutsi.tracking.event.TrackingEventType
 import com.wutsi.tracking.service.pipeline.Pipeline
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.util.UUID
 
 @Service
 public class PushDelegate(
-    @Autowired private val pipeline: Pipeline
+    private val pipeline: Pipeline,
+    private val eventStream: EventStream
 ) {
     public fun invoke(request: PushTrackRequest): PushTrackResponse {
         val transactionId = UUID.randomUUID().toString()
@@ -32,6 +35,7 @@ public class PushDelegate(
             url = request.url
         )
         pipeline.process(track)
+        eventStream.publish(TrackingEventType.TRACK_PROCESSED.urn, TrackProcessedEventPayload(track))
         return PushTrackResponse(
             transactionId = transactionId
         )

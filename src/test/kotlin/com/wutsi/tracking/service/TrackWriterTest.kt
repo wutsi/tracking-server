@@ -1,10 +1,10 @@
 package com.wutsi.tracking.service
 
-import com.wutsi.tracking.domain.Browser
-import com.wutsi.tracking.domain.Device
-import com.wutsi.tracking.domain.OS
-import com.wutsi.tracking.domain.Track
-import com.wutsi.tracking.domain.TrafficType.seo
+import com.wutsi.tracking.dto.Browser
+import com.wutsi.tracking.dto.Device
+import com.wutsi.tracking.dto.OS
+import com.wutsi.tracking.dto.Track
+import com.wutsi.tracking.dto.TrafficType.seo
 import org.junit.jupiter.api.Test
 import java.io.ByteArrayOutputStream
 import kotlin.test.assertEquals

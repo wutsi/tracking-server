@@ -1,6 +1,6 @@
 package com.wutsi.tracking.service.pipeline.step
 
-import com.wutsi.tracking.domain.Track
+import com.wutsi.tracking.dto.Track
 import com.wutsi.tracking.service.pipeline.Step
 import java.net.URL
 import java.net.URLDecoder

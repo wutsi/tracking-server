@@ -5,7 +5,7 @@ import com.nhaarman.mockitokotlin2.argumentCaptor
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.never
 import com.nhaarman.mockitokotlin2.verify
-import com.wutsi.tracking.domain.Track
+import com.wutsi.tracking.dto.Track
 import com.wutsi.tracking.service.TrackPersister
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
