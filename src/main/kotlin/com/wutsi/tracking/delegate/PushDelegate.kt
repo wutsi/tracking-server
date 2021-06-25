@@ -7,6 +7,7 @@ import com.wutsi.tracking.dto.Track
 import com.wutsi.tracking.event.TrackProcessedEventPayload
 import com.wutsi.tracking.event.TrackingEventType
 import com.wutsi.tracking.service.pipeline.Pipeline
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.util.UUID
 
@@ -15,7 +16,12 @@ public class PushDelegate(
     private val pipeline: Pipeline,
     private val eventStream: EventStream
 ) {
+    companion object {
+        private val LOGGER = LoggerFactory.getLogger(PushDelegate::class.java)
+    }
+
     public fun invoke(request: PushTrackRequest): PushTrackResponse {
+        LOGGER.info("processing event=${request.event} productId=${request.pid} user=${request.uid} page=${request.page}")
         val transactionId = UUID.randomUUID().toString()
         val track = Track(
             transactionId = transactionId,
