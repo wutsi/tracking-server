@@ -21,4 +21,6 @@ The user interactions are stored into CSV files having the following columns:
 - **referer**: URL of the referer page
 - **bot**: `true` if this event was fired by a bot
 - **ua**: User Agent
-- **url**: URL where the event was sent
+- **url**: URL where the event was fired
+- **siteid**: ID of the site where the event fired
+- **impressions**: IDs of the product printed when the event was fired. IDs are separated by |

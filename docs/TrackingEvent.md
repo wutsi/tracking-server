@@ -21,3 +21,4 @@ Here is the list of tracking events
 - **like**: User submit a like
 - **share_click**: User click on share button
 - **share**: User shared a Story
+- **click**: User clicks on a product

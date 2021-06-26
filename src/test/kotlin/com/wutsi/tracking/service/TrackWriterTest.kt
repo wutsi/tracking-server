@@ -18,10 +18,12 @@ internal class TrackWriterTest {
         TrackWriter().write(arrayListOf(track), out)
         System.out.println(out)
 
-        val expected =
-            "\"time\",\"hitid\",\"deviceid\",\"userid\",\"page\",\"event\",\"productid\",\"value\",\"os\",\"osversion\",\"devicetype\",\"browser\",\"ip\",\"long\",\"lat\",\"traffic\",\"referer\",\"bot\",\"ua\",\"source\",\"medium\",\"campaign\",\"url\"\n" +
-                "\"3333\",\"123\",\"sample-device\",\"\",\"SR\",\"pageview\",\"1234\",\"1\",\"Windows\",\"7\",\"desktop\",\"IE\",\"1.1.2.3\",\"111.0\",\"222.0\",\"seo\",\"https://www.google.ca\",\"false\",\"Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)\",\"app\",\"pwa\",\"test\",\"https://www.wutsi.com/read/123/this-is-nice?utm_source=email&utm_campaign=test&utm_medium=email\"\n"
-        assertEquals(expected, out.toString())
+        val expected = """
+            "time","hitid","deviceid","userid","page","event","productid","value","os","osversion","devicetype","browser","ip","long","lat","traffic","referer","bot","ua","source","medium","campaign","url","siteid","impressions"
+            "3333","123","sample-device","","SR","pageview","1234","1","Windows","7","desktop","IE","1.1.2.3","111.0","222.0","seo","https://www.google.ca","false","Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)","app","pwa","test","https://www.wutsi.com/read/123/this-is-nice?utm_source=email&utm_campaign=test&utm_medium=email","1","11|12|13"
+        """
+
+        assertEquals(expected.trimIndent(), out.toString().trimIndent())
     }
 
     private fun createTrack() = Track(
@@ -47,6 +49,8 @@ internal class TrackWriterTest {
         url = "https://www.wutsi.com/read/123/this-is-nice?utm_source=email&utm_campaign=test&utm_medium=email",
         source = "app",
         medium = "pwa",
-        campaign = "test"
+        campaign = "test",
+        siteid = "1",
+        impressions = "11|12|13"
     )
 }

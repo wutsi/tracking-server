@@ -48,7 +48,9 @@ class TrackWriter {
                 "source",
                 "medium",
                 "campaign",
-                "url"
+                "url",
+                "siteid",
+                "impressions"
             )
         )
     }
@@ -82,7 +84,9 @@ class TrackWriter {
                 string(track.source),
                 string(track.medium),
                 string(track.campaign),
-                string(track.url)
+                string(track.url),
+                string(track.siteid),
+                string(track.impressions)
             )
         )
     }
