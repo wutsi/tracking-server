@@ -8,6 +8,7 @@ API for tracking user activities&#10;
 
 # Installation Prerequisites
 
+
 ## Configure Github
 - Generate a Github token for accessing packages from GibHub
   - Goto [https://github.com/settings/tokens](https://github.com/settings/tokens)
@@ -18,6 +19,7 @@ API for tracking user activities&#10;
 - Set your GitHub environment variables on your machine:
   - `GITHUB_TOKEN = your-token-value`
   - `GITHUB_USER = your-github-user-name`
+
 
 ## Maven Setup
 - Download Instance [Maven 3.6+](https://maven.apache.org/download.cgi)
